@@ -1,0 +1,35 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: aliceblue;
+}
+h1
+{
+    color: blue;
+    font-size: 3em;
+    margin-top: 20px;
+}
+.board {
+    background-color: rgb(115, 103, 126);
+    border: 2px solid #333333;
+    width: 300px;
+    display:grid;
+    grid-template-columns: repeat(3,100px);
+    -ms-grid-column-align: center;
+    grid-template-rows: repeat(3,100px);
+    -ms-grid-row-align: center;
+    font-size: 2em;
+}
+.cell{
+    background-color: antiquewhite;
+    border: 2px solid #333333;
+    font: size 2em;
+    display:flex;
+    justify-content: center;
+    cursor: pointer;
+    width: 100px;
+    height: 100px;    
+}
+.cell:hover{
+    background-color: azure;
+}
