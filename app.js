@@ -26,7 +26,38 @@ function handleClick(cell , index)
  return;
 cell.textContent = Player;
 
-if
+if(checkWin()) {
+    alert('${Player} wins!')
+    isGameOver = true ;
+    return;
 
 
+}
+
+    if (checkDraw()){
+        alert("its a draw")
+        isGameOver = true
+        return;
+
+    }
+
+    Player = Player === "X" ? "O" : "X"
+
+}
+
+function checkWin() {
+    return WinningCombination.some(combination => {
+        const [a , b , c] = combination
+        return(
+            cell[a].textContent === Player && 
+            cell[b].textContent === Player &&
+            cell[c].textContent === Player );
+ } )
+    
+
+}
+
+function checkDraw() {
+    return [...cells].every( cells => 
+    cell.textContent!== '');
 }
