@@ -13,18 +13,20 @@ h1
     margin: 20px auto;
     background-color: rgb(115, 103, 126);
     border: 2px solid #333333;
-    width: 300px;
+    width: 90vw; /*1vw = 10px*/
+    max-width: 300px;
     display:grid;
     grid-template-columns: repeat(3,100px);
     -ms-grid-column-align: center;
     grid-template-rows: repeat(3,100px);
     -ms-grid-row-align: center;
     font-size: 2em;
+    aspect-ratio: 1/1;
 }
 .cell{
     background-color: antiquewhite;
     border: 2px solid #333333;
-    font: size 2em;
+    font-size: 8vw;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -47,4 +49,25 @@ h1
 
 #resetbutton:hover {
 background-color: aqua;
+}
+
+@media(max-aspect-ratio :4/3){
+    .cell{
+        font-size: 6vw;
+    }
+
+    #resetbutton {
+        font-size: 1.2em;
+    }
+
+}
+@media(max-aspect-ratio :16/9) {
+    .cell{
+        font-size: 9vw;
+
+    }
+
+    #resetbutton{
+        font-size:1.5em;
+    }
 }
