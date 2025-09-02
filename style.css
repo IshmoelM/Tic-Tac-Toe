@@ -71,3 +71,38 @@ background-color: aqua;
         font-size:1.5em;
     }
 }
+
+#nextbutton {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size :1.2em;
+    background-color: rgb(14, 35, 223);
+    color: white #333333;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#nextbutton:hover {
+background-color: aqua;
+}
+
+@media(max-aspect-ratio :4/3){
+    .cell{
+        font-size: 6vw;
+    }
+
+    #nextbutton {
+        font-size: 1.2em;
+    }
+
+}
+@media(max-aspect-ratio :16/9) {
+    .cell{
+        font-size: 9vw;
+
+    }
+
+    #nextbutton{
+        font-size:1.5em;
+    }
+}

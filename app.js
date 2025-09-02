@@ -43,7 +43,7 @@ function checkDraw() {
   return [...cells].every(cell => cell.textContent !== '');
 }
 
-document.getElementById('resetbutton').addEventListener('click' , resetgame)
+document.getElementById('nextbutton').addEventListener('click' , resetgame)
 
 function resetgame ()
 {
@@ -54,6 +54,15 @@ function resetgame ()
   currentPlayer = "X";
   isGameOver = false;
 }
+
+document.getElementById('nextbutton').addEventListener('click' , resetgame)
+
+function nextpage()
+{
+  window.location.href = "next.html";
+
+}
+
 
 
 
